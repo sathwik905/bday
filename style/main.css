@@ -41,6 +41,41 @@ body {
   font-size: 3rem;
 }
 
+.birthday-info {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 20px;
+}
+
+.date-container span,
+.age-container span {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0 5px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.age-container {
+  margin-top: 10px;
+  font-size: 1.8rem;
+}
+
+.date-container span {
+  transition: all 0.3s ease;
+}
+
 .four .text-box {
   border: 3px solid #aaa;
   border-radius: 5px;
@@ -48,6 +83,33 @@ body {
   padding: 10px;
   position: relative;
   width: 600px;
+}
+
+.four {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  color: #333;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .text-box p {

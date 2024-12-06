@@ -18,6 +18,61 @@ window.addEventListener("load", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const dayElement = document.getElementById("day");
+  const monthElement = document.getElementById("month");
+  const yearElement = document.getElementById("year");
+  const ageElement = document.getElementById("age");
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const targetDay = 7;
+  const targetMonthIndex = 11; // December
+  const targetYear = 2024;
+  const birthYear = 2001;
+
+  let currentDay = 1;
+  let currentMonthIndex = 0;
+  let currentYear = birthYear;
+  let currentAge = 0;
+
+  const interval = setInterval(() => {
+    // Update day, month, year, and age in the DOM
+    dayElement.textContent = currentDay;
+    monthElement.textContent = months[currentMonthIndex];
+    yearElement.textContent = currentYear;
+    ageElement.textContent = currentAge;
+
+    // Smoothly increment day, month, year, and age
+    if (currentDay < targetDay) {
+      currentDay++;
+    } else if (currentMonthIndex < targetMonthIndex) {
+      currentDay = targetDay; // Fix day
+      currentMonthIndex++;
+    } else if (currentYear < targetYear) {
+      currentMonthIndex = targetMonthIndex; // Fix month
+      currentYear++;
+      currentAge++;
+    } else {
+      // Stop animation when target is reached
+      clearInterval(interval);
+    }
+  }, 250); // Smoother speed adjustment
+});
+
 // animation timeline
 const animationTimeline = () => {
   // split chars that needs to be animated individually
@@ -52,11 +107,11 @@ const animationTimeline = () => {
   tl.to(".container", 0.6, {
     visibility: "visible",
   })
-    .from(".one", 0.7, {
+    .from(".one", 0.9, {
       opacity: 0,
       y: 10,
     })
-    .from(".two", 0.4, {
+    .from(".two", 0.9, {
       opacity: 0,
       y: 10,
     })
