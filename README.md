@@ -42,13 +42,13 @@ Create personalized birthday wishes with style and ease! This project allows you
 
 Check out the demo: [https://afsify.github.io/happy-birthday](https://afsify.github.io/happy-birthday)  
 
-## 🛠️ Technologies Used  
+## Technologies Used  
 
 - **HTML5**: Markup for structure  
 - **CSS3**: Styling and animations  
 - **JavaScript**: Interactive features
 
-## 🤝 Contributing  
+## Contributing  
 
 Contributions are welcome! If you have ideas to improve this project, feel free to:  
 
